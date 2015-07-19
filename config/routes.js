@@ -36,9 +36,11 @@ module.exports.routes = {
   //   view: 'homepage'
   // }
 
-  // 'GET /': 'PageController.showHomePage'
+  'GET /': 'PageController.showLocationPage',
 
-  'GET /': {view: 'homepage'}
+  // 'GET /': {view: 'homepage'},
+  'PUT /region': 'RegionController.enterLocation',
+  'GET /dash': {view: 'mainDash'}
 
   /***************************************************************************
   *                                                                          *
