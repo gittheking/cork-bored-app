@@ -12,8 +12,8 @@
 	<!--STYLES END-->
 </head>
 <body ng-app="MainDashModule" ng-controller="MainDashController" ng-cloak>
-	<h1>Locations</h1>
-	<div id="page-data" data="{region: '<%= regData['region'] %>', randStr: '<%= regData['eb'] %>'}">
+	<h1>Local Events for <%= regData['region']%></h1>
+	<div id="page-data" data-loc="<%= regData['region'] %>" data-rand="<%= regData['eb'] %>">
 	</div>
 
 	<!--SCRIPTS-->
@@ -27,5 +27,12 @@
 	<script src="/js/public/main.js"></script>
 	<script src="/js/public/mainDash/MainDashController.js"></script>
 	<!--SCRIPTS END-->
+	<div ng-controller="MainDashController" ng-init="getFeaturedPosts()">
+		<ul>
+			<li ng-repeat="event in eventsData.events | limitTo: 20">
+				{{event.name}}
+			</li>
+		</ul>
+	</div>
 </body>
 </html>
