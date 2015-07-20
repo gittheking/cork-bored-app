@@ -12,7 +12,11 @@
 	<!--STYLES END-->
 </head>
 <body ng-app="MainDashModule" ng-controller="MainDashController" ng-cloak>
-	<h1>Local Events for <%= regData['region']%></h1>
+	<div class="location paper">
+		<img class"left-tack" src="/images/thumbtack.png" width="40" height="40" style="margin-left:-15px">
+		<img class"right-tack" src="/images/thumbtack.png" width="40" height="40" style="float:right;">
+		<h1>Local Events for <%= regData['region']%></h1>
+	</div>
 	<div id="page-data" data-loc="<%= regData['region'] %>" data-rand="<%= regData['eb'] %>">
 	</div>
 
@@ -28,8 +32,8 @@
 	<script src="/js/public/mainDash/MainDashController.js"></script>
 	<!--SCRIPTS END-->
 	<div class="events" ng-controller="MainDashController" ng-init="getFeaturedPosts()">
-		<div class="post" ng-repeat="event in eventsData.events | limitTo: 20">
-			<img class"left-tack" src="/images/thumbtack.png" width="40" height="40">
+		<div class="post paper" ng-repeat="event in eventsData.events | limitTo: 20">
+			<img class"left-tack" src="/images/thumbtack.png" width="40" height="40" style="margin-left:-15px">
 			<img class"right-tack" src="/images/thumbtack.png" width="40" height="40" style="float:right;">
 			<h2>{{event.name.text}}</h2>
 			<img class="event-pic" src="{{event.logo.url}}">

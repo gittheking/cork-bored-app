@@ -5,7 +5,7 @@ angular.module('MainDashModule').controller('MainDashController', [ '$scope', '$
 
 		$http({
 				method: 'GET',
-				url: 'https://www.eventbriteapi.com/v3/events/?popular=true&location.within=5mi&location.address=' + region + '&token=' + x,
+				url: 'https://www.eventbriteapi.com/v3/events/?q=local&popular=true&sort_by=distance&location.within=5mi&location.region=' + region + '&token=' + x,
 				datatype: 'jsonp'
 			}).success(function(ebData){
 				console.log('Success!!!!')
