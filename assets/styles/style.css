@@ -9,3 +9,34 @@ h1 {
 	font-size: 50px;
 	margin-bottom: 20px;
 }
+h2{
+	text-align: center;
+}
+
+.events {
+	overflow: auto;
+}
+.post {
+	background-color: #eeeeee;
+	width: 500px;
+	margin: 20px;
+	margin-left: 40px;
+	padding: 20px;
+	float: left;
+}
+.left-tack {
+	/*display: inline;*/
+	float: left;
+}
+.right-tack {
+	/*display: inline;*/
+	float: right;
+	margin-left: 80%;
+}
+.event-pic {
+	display: block;
+	margin: auto;
+}
+.description {
+	padding: 20px;
+}

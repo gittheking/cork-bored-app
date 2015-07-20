@@ -27,12 +27,17 @@
 	<script src="/js/public/main.js"></script>
 	<script src="/js/public/mainDash/MainDashController.js"></script>
 	<!--SCRIPTS END-->
-	<div ng-controller="MainDashController" ng-init="getFeaturedPosts()">
-		<ul>
-			<li ng-repeat="event in eventsData.events | limitTo: 20">
-				{{event.name}}
-			</li>
-		</ul>
+	<div class="events" ng-controller="MainDashController" ng-init="getFeaturedPosts()">
+		<div class="post" ng-repeat="event in eventsData.events | limitTo: 20">
+			<img class"left-tack" src="/images/thumbtack.png" width="40" height="40">
+			<img class"right-tack" src="/images/thumbtack.png" width="40" height="40" style="float:right;">
+			<h2>{{event.name.text}}</h2>
+			<img class="event-pic" src="{{event.logo.url}}">
+			<p class="description">
+				{{event.description.text}}
+			</p>
+			<a href="{{event.url}}">Tickets and more info...</a>
+		</div>
 	</div>
 </body>
 </html>
