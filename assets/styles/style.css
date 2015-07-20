@@ -13,6 +13,16 @@ h2{
 	text-align: center;
 	color: #333333;
 }
+a{
+	text-decoration: none;
+	color: #333333;
+}
+
+a:hover {
+	color: #333333;
+	text-decoration: underline;
+}
+
 .location {
 	max-width: 800px;
 	margin: auto;
