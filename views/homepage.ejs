@@ -16,10 +16,6 @@
 <form name="locationForm" ng-submit="submitLocationForm()" id="location-form" class="form-location">
   <div class="control-group form-group col-md-12" ng-class="{'has-error':location.region.$invalid && location.region.$dirty}">
     <input type="text" class="form-control" placeholder="e.g. New York,NY -or- 10022" name="region" style="width: 300px; margin-left: auto; margin-right: auto;" ng-model="locationForm.region" ng-maxlength="25" required>
-    <!-- <span class="help-block has-error" ng-if="location.region.$dirty">
-      <span ng-show="location.region.$error.required">Location is required</span>
-      <span ng-show="location.region.$error.maxlength">Invalid location</span>
-    </span> -->
   </div>
   <button class="btn btn-primary btn-lg btn-block" type="submit" style="width: 260px; margin-left: auto; margin-right: auto;">Submit Location</button>
 </form>
@@ -28,11 +24,11 @@
   <script src="/js/dependencies/angular.1.3.js"></script>
   <script src="/js/dependencies/angular-toastr.js"></script>
   <script src="/js/dependencies/jquery.js"></script>
-  <script src="/js/public/MainDashController.js"></script>
-  <script src="/js/public/MainDashModule.js"></script>
-  <script src="/js/public/homepage/HomepageController.js"></script>
   <script src="/js/public/homepage/HomepageModule.js"></script>
+  <script src="/js/public/mainDash/MainDashModule.js"></script>
+  <script src="/js/public/homepage/HomepageController.js"></script>
   <script src="/js/public/main.js"></script>
+  <script src="/js/public/mainDash/MainDashController.js"></script>
   <!--SCRIPTS END-->
 </body>
 </html>

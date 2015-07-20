@@ -32,6 +32,7 @@ var jsFilesToInject = [
   'js/dependencies/**/*.js',
 
   'js/public/homepage/HomepageModule.js',
+  'js/public/mainDash/MainDashModule.js',
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
   'js/**/*.js'
