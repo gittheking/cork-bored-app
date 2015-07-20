@@ -52,16 +52,6 @@ module.exports = {
 
 			// http.request(options, callback).end();
 
-			// $.ajax({
-			// 	url: 'http://eventbriteapi.com/v3/events/?popular=true&location.within=5mi&location.address=' + req.session.reg + '&token=' + process.env.EVENTBRITE_KEY,
-			// 	type: 'get',
-			// 	datatype: 'jsonp'
-			// }).done(function(ebData){
-			// 	return res.view('mainDash', {
-			// 		regData: ebData
-			// 	})
-			// });
-
 			return res.view('mainDash', {
 				regData: {
 					region: req.session.reg,
