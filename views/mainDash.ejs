@@ -16,7 +16,7 @@
 		<img class"left-tack" src="/images/thumbtack.png" width="40" height="40" style="margin-left:-15px">
 		<img class"right-tack" src="/images/thumbtack.png" width="40" height="40" style="float:right;">
 			<h1 id="loc-banner">Local Events for 
-				<a href="/newloc"><%= regData['region']%>
+				<a href="/newloc" title="Click to change location"><%= regData['region']%>
 				</a>
 			</h1>
 	</div>
@@ -28,14 +28,15 @@
 	<script src="/js/dependencies/angular.1.3.js"></script>
 	<script src="/js/dependencies/angular-toastr.js"></script>
 	<script src="/js/dependencies/jquery.js"></script>
+	<script src="/js/dependencies/masonry.js"></script>
 	<script src="/js/public/homepage/HomepageModule.js"></script>
 	<script src="/js/public/mainDash/MainDashModule.js"></script>
 	<script src="/js/public/homepage/HomepageController.js"></script>
 	<script src="/js/public/main.js"></script>
 	<script src="/js/public/mainDash/MainDashController.js"></script>
 	<!--SCRIPTS END-->
-	<div class="events" ng-controller="MainDashController" ng-init="getFeaturedPosts()">
-		<div class="post paper" ng-repeat="event in eventsData.events | limitTo: 20">
+	<div class="events grid" ng-controller="MainDashController" ng-init="getFeaturedPosts()">
+		<div class="post paper grid-item" ng-repeat="event in eventsData.events | limitTo: 20">
 			<img class"left-tack" src="/images/thumbtack.png" width="40" height="40" style="margin-left:-15px">
 			<img class"right-tack" src="/images/thumbtack.png" width="40" height="40" style="float:right;">
 			<h2>{{event.name.text}}</h2>
