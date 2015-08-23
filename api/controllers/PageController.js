@@ -12,7 +12,7 @@ module.exports = {
 			var reg = strArray.join('');
 
 			return res.view('mainDash', {
-				regData: {
+				regData: { 
 					region: reg,
 					eb: process.env.EVENTBRITE_KEY
 				}
